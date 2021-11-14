@@ -13,9 +13,6 @@
 <script src="<?= $templateFolder ?>/js/bootstrap.min.js"></script>
 <script src="<?= $templateFolder ?>/js/datepicker/bootstrap-datepicker.min.js"></script>
 
-<link rel="stylesheet" href="<?= $templateFolder ?>/css/jquery-ui.css">
-<link rel="stylesheet" href="<?= $templateFolder ?>/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?= $templateFolder ?>/css/datepicker/bootstrap-datepicker.standalone.min.css">
 
           <form id="form_<?= $arParams['TOKEN'] ?>" enctype="multipart/form-data" type="post">
             <div class="form__holder">
@@ -42,7 +39,7 @@
                 <div class="col-lg-12 col-md-12">
                   <div class="form__row form__row-bottom">
                     <button class="button button-primary" type="submit" name="button">Задать вопрос</button>
-                    <div class="form__text">Нажимая кнопку, я даю согласие на обработку своих персональных данных <br>в соответствии с <a href="#">Политикой конфиденциальности</a></div>
+                    <div class="form__text">Нажимая кнопку, я даю согласие на обработку своих персональных данных <br>в соответствии с <a href="/policy/">Политикой конфиденциальности</a></div>
                   </div>
                 </div>
               </div>

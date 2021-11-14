@@ -1,0 +1,72 @@
+.rating-area {
+overflow: hidden;
+    width: auto;
+    margin: 0 auto;
+    margin-left: 20px;
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    width: 28px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 30px;
+    color: #c6b8b8;
+    display: block;
+    margin: 0;
+}
+.rating-area:not(:checked) > label:before {
+    content: '★';
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border: 0;
+    background-color: #0000;
+    vertical-align: middle;
+    -webkit-transition: color ease .1s;
+    transition: color ease .1s;
+    border-radius: 0;
+}
+.rating-area > input:checked ~ label {
+  color: #fed57b;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: #fed57b;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: #fed57b;
+}
+.rate-area > label:active {
+  position: relative;
+}
+.rating-result {
+  width: auto;
+  margin: 0 auto;
+}
+.rating-result span {
+  padding: 0;
+  font-size: 24px;
+  margin: 0;
+  line-height: 1;
+  color: #c6b8b8;
+
+}
+.rating-result > span:before {
+  content: '★';
+}
+.rating-result > span.active {
+  color: #fed57b;
+ 
+}

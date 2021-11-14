@@ -80,7 +80,7 @@ $APPLICATION->SetTitle("Адреса магазинов");
 <?
 $APPLICATION->IncludeComponent(
 	"custom:form", 
-	"address_shop", 
+	".default", 
 	array(
 		"IBLOCK_ID" => "6",
 		"MAIL_EVENT" => "FORM_SENDED",
@@ -101,7 +101,7 @@ $APPLICATION->IncludeComponent(
 			7 => "DOCUMENT,FILE",
 			8 => "DOCUMENTS,FILES",
 		),
-		"COMPONENT_TEMPLATE" => "address_shop"
+		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
 );

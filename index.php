@@ -1,8 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
-?> 
-
+$APPLICATION->SetTitle("Главная");
+?>
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "first_banner_home_page", Array(
   "ACTIVE_DATE_FORMAT" => "d.m.Y",  // Формат показа даты
     "ADD_SECTIONS_CHAIN" => "N",  // Включать раздел в цепочку навигации
@@ -201,7 +200,7 @@ $APPLICATION->SetTitle('Главная');
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "page_info",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
@@ -467,33 +466,73 @@ $APPLICATION->SetTitle('Главная');
             все товары<svg><use xlink:href="#arrow3"></use></svg></a></div>
       </div>
     </div>
-    <div class="article-main">
-      <div class="container">
-        <div class="title-main"><a class="title-main__lnk" href="#">Читать все</a>
-          <h2>Статьи и обзоры</h2>
-        </div>
-        <div class="article-main__slider js-article-main">
-          <div class="article__item"><a class="article__item-img" href="#" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/images/article-img1.jpg')"></a>
-            <div class="article__item-data">12.05.2020</div><a class="article__item-title" href="#">Главные достоинства корейской косметики</a>
-            <div class="article__item-tx">Для тех, кто активно интересуется</div>
-          </div>
-          <div class="article__item"><a class="article__item-img" href="#" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/images/article-img2.jpg')"></a>
-            <div class="article__item-data">12.05.2020</div><a class="article__item-title" href="#">Главные достоинства корейской косметики</a>
-            <div class="article__item-tx">Для тех, кто активно интересуется тенденциями в индустрии красоты уже тенденциями в индустрии красоты уже</div>
-          </div>
-          <div class="article__item"><a class="article__item-img" href="#" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/images/article-img3.jpg')"></a>
-            <div class="article__item-data">12.05.2020</div><a class="article__item-title" href="#">Главные достоинства корейской косметики</a>
-            <div class="article__item-tx">Для тех, кто активно интересуется тенденциями в индустрии красоты уже тенденциями в индустрии красоты уже</div>
-          </div>
-          <div class="article__item"><a class="article__item-img" href="#" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/images/article-img3.jpg')"></a>
-            <div class="article__item-data">12.05.2020</div><a class="article__item-title" href="#">Главные достоинства корейской косметики</a>
-            <div class="article__item-tx">Для тех, кто активно интересуется тенденциями в индустрии красоты уже тенденциями в индустрии красоты уже</div>
-          </div>
-        </div>
-        <div class="button-mob"><a class="button button-primary" href="#">
-            читать все<svg><use xlink:href="#arrow3"></use></svg></a></div>
-      </div>
-    </div>
+    
+<?$APPLICATION->IncludeComponent(
+  "bitrix:news.list", 
+  "news_na_glav", 
+  array(
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+    "ADD_SECTIONS_CHAIN" => "N",
+    "AJAX_MODE" => "N",
+    "AJAX_OPTION_ADDITIONAL" => "",
+    "AJAX_OPTION_HISTORY" => "N",
+    "AJAX_OPTION_JUMP" => "N",
+    "AJAX_OPTION_STYLE" => "Y",
+    "CACHE_FILTER" => "N",
+    "CACHE_GROUPS" => "Y",
+    "CACHE_TIME" => "36000000",
+    "CACHE_TYPE" => "A",
+    "CHECK_DATES" => "Y",
+    "DETAIL_URL" => "",
+    "DISPLAY_BOTTOM_PAGER" => "N",
+    "DISPLAY_DATE" => "Y",
+    "DISPLAY_NAME" => "Y",
+    "DISPLAY_PICTURE" => "Y",
+    "DISPLAY_PREVIEW_TEXT" => "Y",
+    "DISPLAY_TOP_PAGER" => "N",
+    "FIELD_CODE" => array(
+      0 => "",
+      1 => "",
+    ),
+    "FILTER_NAME" => "",
+    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+    "IBLOCK_ID" => "5",
+    "IBLOCK_TYPE" => "page_info",
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+    "INCLUDE_SUBSECTIONS" => "N",
+    "MESSAGE_404" => "",
+    "NEWS_COUNT" => "",
+    "PAGER_BASE_LINK_ENABLE" => "N",
+    "PAGER_DESC_NUMBERING" => "N",
+    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+    "PAGER_SHOW_ALL" => "N",
+    "PAGER_SHOW_ALWAYS" => "N",
+    "PAGER_TEMPLATE" => "",
+    "PAGER_TITLE" => "",
+    "PARENT_SECTION" => "",
+    "PARENT_SECTION_CODE" => "",
+    "PREVIEW_TRUNCATE_LEN" => "",
+    "PROPERTY_CODE" => array(
+      0 => "",
+      1 => "",
+    ),
+    "SET_BROWSER_TITLE" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "SET_META_DESCRIPTION" => "N",
+    "SET_META_KEYWORDS" => "N",
+    "SET_STATUS_404" => "N",
+    "SET_TITLE" => "N",
+    "SHOW_404" => "N",
+    "SORT_BY1" => "ACTIVE_FROM",
+    "SORT_BY2" => "SORT",
+    "SORT_ORDER1" => "DESC",
+    "SORT_ORDER2" => "ASC",
+    "STRICT_SECTION_CHECK" => "N",
+    "COMPONENT_TEMPLATE" => "news_na_glav"
+  ),
+  false
+);?>
+
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "tree_banner_home_page", Array(
   "ACTIVE_DATE_FORMAT" => "d.m.Y",  // Формат показа даты
     "ADD_SECTIONS_CHAIN" => "N",  // Включать раздел в цепочку навигации

@@ -30,7 +30,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Условия возврата", 
-		"", 
+		"/vozvrat-tovarov/", 
 		Array(), 
 		Array(), 
 		"" 

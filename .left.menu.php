@@ -30,14 +30,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Статьи", 
-		"/articles/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Политика конфиденциальности", 
-		"/policy/", 
+		"/stati/", 
 		Array(), 
 		Array(), 
 		"" 

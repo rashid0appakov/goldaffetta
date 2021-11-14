@@ -1,13 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Статьи");
-?><?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadik", Array(
-	"PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-		"SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-		"START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
-	),
-	false
-);?><?$APPLICATION->IncludeComponent(
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"articles", 
 	array(
@@ -20,7 +14,7 @@ $APPLICATION->SetTitle("Статьи");
 		"AJAX_OPTION_STYLE" => "Y",
 		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
@@ -77,7 +71,7 @@ $APPLICATION->SetTitle("Статьи");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "page_info",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j M Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",
@@ -99,7 +93,7 @@ $APPLICATION->SetTitle("Статьи");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Статьи",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/articles/",
+		"SEF_FOLDER" => "/stati/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
@@ -134,7 +128,7 @@ $APPLICATION->SetTitle("Статьи");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false
